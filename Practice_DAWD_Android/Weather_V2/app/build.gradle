@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "weather_V2"
+        applicationId "duchu.weather_V2"
         minSdk 21
         targetSdk 31
         versionCode 1

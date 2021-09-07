@@ -1,4 +1,4 @@
-package weather_V2.model;
+package duchu.weather_V2.model;
 
 import androidx.annotation.NonNull;
 

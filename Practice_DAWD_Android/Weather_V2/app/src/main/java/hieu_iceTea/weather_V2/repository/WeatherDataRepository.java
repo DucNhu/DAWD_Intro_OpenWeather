@@ -1,5 +1,8 @@
-package weather_V2.repository;
+package duchu.weather_V2.repository;
 
+import androidx.annotation.Nullable;
+
+import com.android.volley.Response;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -10,28 +13,26 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import weather_V2.controller.VolleyAppController;
-import weather_V2.model.Main;
-import weather_V2.model.Weather;
+import duchu.weather_V2.controller.VolleyAppController;
+import duchu.weather_V2.model.Main;
+import duchu.weather_V2.model.Weather;
 
 
 public class WeatherDataRepository {
 
-    String cityName;
     String url;
 
     List<Weather> weathers = new ArrayList<>();
     Main main = new Main();
 
-    public WeatherDataRepository(String cityName) {
-        this.cityName = cityName;
-        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=3790f712337cbfece38c0ae41594ad7c";
-    }
+    public void getData(String cityName, AsyncProcess callBackAsyncProcess, @Nullable Response.ErrorListener errorListener) {
 
-    public void getData(AsyncProcess callBackAsyncProcess) {
+        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=3790f712337cbfece38c0ae41594ad7c";
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
+
                 url,
+
                 response -> {
 
                     try {
@@ -66,8 +67,11 @@ public class WeatherDataRepository {
                     }
 
                 },
+
                 error -> {
-                    //nothing
+                    if (errorListener != null) {
+                        errorListener.onErrorResponse(error);
+                    }
                 }
 
         );

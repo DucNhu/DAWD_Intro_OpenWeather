@@ -1,4 +1,4 @@
-package weather_V2;
+package duchu.weather_V2;
 
 import org.junit.Test;
 

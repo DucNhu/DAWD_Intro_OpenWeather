@@ -1,9 +1,9 @@
-package weather_V2.repository;
+package duchu.weather_V2.repository;
 
 import java.util.List;
 
-import weather_V2.model.Main;
-import weather_V2.model.Weather;
+import duchu.weather_V2.model.Main;
+import duchu.weather_V2.model.Weather;
 
 
 public interface AsyncProcess {

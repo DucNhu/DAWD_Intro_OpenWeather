@@ -1,4 +1,4 @@
-package weather_V2;
+package duchu.weather_V2;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("weather_V2", appContext.getPackageName());
+        assertEquals("duchu.weather_V2", appContext.getPackageName());
     }
 }
