@@ -1,9 +1,9 @@
-package hieu_iceTea.weather_V2.repository;
+package weather_V2.repository;
 
 import java.util.List;
 
-import hieu_iceTea.weather_V2.model.Main;
-import hieu_iceTea.weather_V2.model.Weather;
+import weather_V2.model.Main;
+import weather_V2.model.Weather;
 
 
 public interface AsyncProcess {

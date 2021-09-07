@@ -1,4 +1,4 @@
-package hieu_iceTea.weather_V2;
+package weather_V2;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
-import hieu_iceTea.weather_V2.repository.DataRepository;
+import weather_V2.repository.DataRepository;
 
 public class MainActivity extends AppCompatActivity {
 
