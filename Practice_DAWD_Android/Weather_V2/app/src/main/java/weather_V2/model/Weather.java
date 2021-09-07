@@ -1,4 +1,4 @@
-package hieu_iceTea.weather_V2.model;
+package weather_V2.model;
 
 import androidx.annotation.NonNull;
 
