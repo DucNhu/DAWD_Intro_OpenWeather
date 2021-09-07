@@ -1,4 +1,4 @@
-package weather_V2.repository;
+package hieu_iceTea.weather_V2.repository;
 
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.gson.Gson;
@@ -10,17 +10,23 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import weather_V2.controller.VolleyAppController;
-import weather_V2.model.Main;
-import weather_V2.model.Weather;
+import hieu_iceTea.weather_V2.controller.VolleyAppController;
+import hieu_iceTea.weather_V2.model.Main;
+import hieu_iceTea.weather_V2.model.Weather;
 
 
-public class DataRepository {
+public class WeatherDataRepository {
 
-    String url = "https://api.openweathermap.org/data/2.5/weather?q=vinh&appid=3790f712337cbfece38c0ae41594ad7c";
+    String cityName;
+    String url;
 
     List<Weather> weathers = new ArrayList<>();
     Main main = new Main();
+
+    public WeatherDataRepository(String cityName) {
+        this.cityName = cityName;
+        this.url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=3790f712337cbfece38c0ae41594ad7c";
+    }
 
     public void getData(AsyncProcess callBackAsyncProcess) {
 
